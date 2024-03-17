@@ -1,0 +1,139 @@
+@import url(assests/css/style.css);
+body {
+  font-size: 18px;
+  color: blue; }
+
+#container {
+  width: 680px; }
+
+h1 {
+  color: green; }
+
+p {
+  color: blue; }
+
+h2 {
+  width: 120px; }
+
+h3 {
+  font-family: false; }
+
+h4 {
+  font-sizes: 12px, 14px, 16px, 18px; }
+
+.test {
+  margin-left: 10px; }
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  nav ul li {
+    display: inline-block;
+    margin-right: 10px; }
+    nav ul li a {
+      text-decoration: none;
+      color: blue; }
+      nav ul li a:hover {
+        text-decoration: underline; }
+
+p1 {
+  total-width: 120px;
+  result: true; }
+
+.container {
+  color: teal; }
+
+.list-1 {
+  width: 100px; }
+
+.list-2 {
+  width: 200px; }
+
+.list-3 {
+  width: 300px; }
+
+.list-4 {
+  width: 400px; }
+
+.list-5 {
+  width: 500px; }
+
+.list-6 {
+  width: 600px; }
+
+.list-7 {
+  width: 700px; }
+
+.list-8 {
+  width: 800px; }
+
+.list-9 {
+  width: 900px; }
+
+.font-weight-normal {
+  font-weight: normal; }
+
+.font-weight-bold {
+  font-weight: bold; }
+
+.font-weight-italic {
+  font-weight: italic; }
+
+.padding-1 {
+  padding: 10; }
+
+.padding-2 {
+  padding: 20; }
+
+.padding-3 {
+  padding: 30; }
+
+.padding-4 {
+  padding: 40; }
+
+.padding-5 {
+  padding: 50; }
+
+.padding-6 {
+  padding: 60; }
+
+.padding-7 {
+  padding: 70; }
+
+.padding-8 {
+  padding: 80; }
+
+.padding-9 {
+  padding: 90; }
+
+.padding-10 {
+  padding: 100; }
+
+.xyz {
+  width: 800px; }
+
+p2 {
+  new-color: #8bc4ea; }
+
+.myArticle {
+  border: 1px solid blue; }
+
+.myTips {
+  border: 1px solid orange; }
+
+.button-basic, .button-report, .button-submit {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer; }
+
+.button-report {
+  background-color: red; }
+
+.button-submit {
+  background-color: green;
+  color: white; }
+
+/*# sourceMappingURL=style.css.map */

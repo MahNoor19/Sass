@@ -1,0 +1,155 @@
+$myColor: blue;
+$myFontSize: 18px;
+$myWidth: 680px;
+//Variable
+body {
+  font-size: $myFontSize;
+  color: $myColor;
+}
+
+#container {
+  width: $myWidth;
+}
+// Variable scope
+h1 {
+  $myColor: green;
+  color: $myColor;
+}
+
+p {
+  color: $myColor;
+}
+//Numbers
+$x: 100px;
+$y: 20px;
+h2{
+    width: $x + $y;
+}
+//Boolean
+h3{
+    font-family: "Arial" == "ARIAL";
+}
+//List
+h4{
+    font-sizes: 12px, 14px, 16px, 18px;
+}
+//String Interpulation
+@mixin margin($position, $value){
+    margin-#{$position}: $value + px; 
+}
+.test{
+    @include margin(left, 10);
+}
+@import "navbar";
+
+
+//Operators
+$width: 100px;
+$padding: 20px;
+$num1: 10;
+$num2: 5;
+p1{
+    total-width: $width + $padding;
+    result: $num1 > $num2;}
+
+//else-if
+$container-padding:30px;
+.container{
+    @if($container-padding < 30){ color: red; }
+    @else if($container-padding == 30){ color: teal; }
+    @else if($container-padding > 30 and $container-padding < 70){ color: orange; }
+    @else{color: black;}
+}
+
+// For with to
+
+$i:1;
+@for $i from 1 to 10 {
+    .list-#{$i}{
+        width: 100px * $i;
+    }
+    
+}
+//Each with list
+$list:(normal, bold, italic);
+$i:1;
+@each $i in $list {
+    .font-weight-#{$i}{
+        font-weight: $i;
+    }
+    
+}
+// while in sass
+$i:1;
+@while $i <= 10 {
+    .padding-#{$i}{
+        padding: 10 * $i;
+    }
+    $i : $i + 1;
+    
+}
+
+//Function in saas
+$container-width:400;
+@function test($value){
+    @return($value * 2) + px;
+}
+
+.xyz{
+    width: test($container-width)
+}
+
+@import 'assests/css/style.css';
+//built-in function
+$color: #3498db;
+p2 {
+    new-color: lighten($color, 20%);
+}
+
+//custom functions
+@function calculate-area($width, $height) {
+    @return $width * $height;
+  }
+//mixins
+  @mixin important-text {
+    color: red;
+    font-size: 25px;
+    font-weight: bold;
+    border: 1px solid blue;
+  }
+
+//passing values to mixin
+@mixin bordered($color, $width) {
+    border: $width solid $color;
+  }
+  .myArticle {
+    @include bordered(blue, 1px);
+  }
+
+//Defalut values for a mixin
+@mixin bordered($color: blue, $width: 1px) {
+    border: $width solid $color;
+  }
+  .myTips {
+    @include bordered($color: orange);
+  }
+
+  //extend directive
+  .button-basic  {
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .button-report  {
+    @extend .button-basic;
+    background-color: red;
+  }
+  
+  .button-submit  {
+    @extend .button-basic;
+    background-color: green;
+    color: white;
+  }
